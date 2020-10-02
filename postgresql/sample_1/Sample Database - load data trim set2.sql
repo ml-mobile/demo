@@ -33,7 +33,7 @@ VALUES('Santa Cruz Bikes','(831) 476-4321','santacruz@bikes.shop','3700 Portola 
 
 
 
-SET IDENTITY_INSERT sales.staffs ON;  
+--SET IDENTITY_INSERT sales.staffs ON;
 
 INSERT INTO sales.staffs(staff_id, first_name, last_name, email, phone, active, store_id, manager_id) VALUES(1,'Fabiola','Jackson','fabiola.jackson@bikes.shop','(831) 555-5554',1,1,NULL);
 INSERT INTO sales.staffs(staff_id, first_name, last_name, email, phone, active, store_id, manager_id) VALUES(2,'Mireya','Copeland','mireya.copeland@bikes.shop','(831) 555-5555',1,1,1);
@@ -46,9 +46,9 @@ INSERT INTO sales.staffs(staff_id, first_name, last_name, email, phone, active, 
 INSERT INTO sales.staffs(staff_id, first_name, last_name, email, phone, active, store_id, manager_id) VALUES(9,'Layla','Terrell','layla.terrell@bikes.shop','(972) 530-5556',1,3,7);
 INSERT INTO sales.staffs(staff_id, first_name, last_name, email, phone, active, store_id, manager_id) VALUES(10,'Bernardine','Houston','bernardine.houston@bikes.shop','(972) 530-5557',1,3,7);
 
-SET IDENTITY_INSERT sales.staffs OFF;  
+--SET IDENTITY_INSERT sales.staffs OFF;
 
-SET IDENTITY_INSERT sales.orders ON;  
+--SET IDENTITY_INSERT sales.orders ON;
 INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(1,1,4,'20160101','20160103','20160103',1,2);
 INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(2,2,4,'20160101','20160104','20160103',2,6);
 INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(3,3,4,'20160102','20160105','20160103',2,7);
@@ -59,7 +59,7 @@ INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, requir
 INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(8,8,4,'20160104','20160105','20160105',2,7);
 
 
-SET IDENTITY_INSERT sales.orders OFF;
+--SET IDENTITY_INSERT sales.orders OFF;
 
 
 INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(1,1,10,1,599.99,0.2);
