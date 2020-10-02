@@ -37,7 +37,7 @@ CREATE TABLE sales.staffs (
 	last_name VARCHAR (50) NOT NULL,
 	email VARCHAR (255) NOT NULL UNIQUE,
 	phone VARCHAR (25),
-	active tinyint NOT NULL,
+	active smallint NOT NULL,
 	store_id INT NOT NULL,
 	manager_id INT,
 	FOREIGN KEY (store_id) REFERENCES sales.stores (store_id) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -47,7 +47,7 @@ CREATE TABLE sales.staffs (
 CREATE TABLE sales.orders (
 	order_id serial PRIMARY KEY,
 	customer_id INT,
-	order_status tinyint NOT NULL,
+	order_status smallint NOT NULL,
 	-- Order status: 1 = Pending; 2 = Processing; 3 = Rejected; 4 = Completed
 	order_date DATE NOT NULL,
 	required_date DATE NOT NULL,
